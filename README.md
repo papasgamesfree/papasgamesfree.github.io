@@ -1,2 +1,2 @@
 # papasgamesfree.github.io
-Get ready to level up your gaming with Papa's Games online—totally free, no downloads needed! Whether you're craving the cool vibes of Papa's Freezeria or want to dive into a whole menu of games, it's all here and ready to play right now! Let's get in on the action!
+Ever dreamed of running your own restaurant? Papa's Games make that dream a reality! This beloved series throws you into the fast-paced world of food service, where you'll learn to whip up mouthwatering dishes, keep customers happy, and build your culinary empire. With over a dozen titles to choose from, there's a Papa's game for every taste!
