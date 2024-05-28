@@ -9835,7 +9835,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     border-width: 0 0 0 2px;
     border-style: solid;
     border-color: var(--ltn__secondary-color);
-    max-width: 450px;
+/*     max-width: 450px; */
 }
 
 .ltn__section-title-2.text-right p {
