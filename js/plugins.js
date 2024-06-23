@@ -7429,7 +7429,7 @@
                     e.gallery_image = " style='margin:" + f.margin + "% " + f.margin + "%;width:" + h + "%;float:left;'"
                 }
                 var j = "";
-                f.display_profile && (j += "<div class='instagram_profile'" + e.profile_container + ">", j += "<img class='instagram_profile_image' src='" + c.profile_pic_url + "' alt='" + (g ? c.name + " tag pic" : c.username + " profile pic") + "'" + e.profile_image + (f.lazy_load ? " loading='lazy'" : "") + " />", j += g ? "<p class='instagram_tag'" + e.profile_name + "><a href='https://www.instagram.com/explore/tags/" + f.tag + "' rel='noopener' target='_blank'>#" + f.tag + "</a></p>" : "<p class='instagram_username'" + e.profile_name + ">@" + c.full_name + " (<a href='https://www.instagram.com/" + f.username + "' rel='noopener' target='_blank'>@" + f.username + "</a>)</p>", !g && f.display_biography && (j += "<p class='instagram_biography'" + e.profile_biography + ">" + c.biography + "</p>"), j += "</div>");
+                f.display_profile && (j += "<div class='instagram_profile'" + e.profile_container + ">", j += "<img class="lazyload" class='instagram_profile_image' src='" + c.profile_pic_url + "' alt='" + (g ? c.name + " tag pic" : c.username + " profile pic") + "'" + e.profile_image + (f.lazy_load ? " loading='lazy'" : "") + " />", j += g ? "<p class='instagram_tag'" + e.profile_name + "><a href='https://www.instagram.com/explore/tags/" + f.tag + "' rel='noopener' target='_blank'>#" + f.tag + "</a></p>" : "<p class='instagram_username'" + e.profile_name + ">@" + c.full_name + " (<a href='https://www.instagram.com/" + f.username + "' rel='noopener' target='_blank'>@" + f.username + "</a>)</p>", !g && f.display_biography && (j += "<p class='instagram_biography'" + e.profile_biography + ">" + c.biography + "</p>"), j += "</div>");
                 var k = "undefined" == typeof d[f.image_size] ? d[640] : d[f.image_size];
                 if (f.display_gallery) if ("undefined" != typeof c.is_private && !0 === c.is_private) j += "<p class='instagram_private'><strong>This profile is private</strong></p>"; else {
                     var l = (c.edge_owner_to_timeline_media || c.edge_hashtag_to_media).edges;
@@ -7446,7 +7446,7 @@
                             default:
                                 o = "image", n = l[m].node.thumbnail_resources[k].src;
                         }
-                        p = "undefined" != typeof l[m].node.edge_media_to_caption.edges[0] && "undefined" != typeof l[m].node.edge_media_to_caption.edges[0].node && "undefined" != typeof l[m].node.edge_media_to_caption.edges[0].node.text && null !== l[m].node.edge_media_to_caption.edges[0].node.text ? l[m].node.edge_media_to_caption.edges[0].node.text : "undefined" != typeof l[m].node.accessibility_caption && null !== l[m].node.accessibility_caption ? l[m].node.accessibility_caption : (g ? c.name : c.username) + " image " + m, j += "<a href='" + q + "' class='instagram-" + o + "' rel='noopener' target='_blank'>", j += "<img" + (f.lazy_load ? " loading='lazy'" : "") + " src='" + n + "' alt='" + b(p) + "'" + e.gallery_image + " />", j += "</a>"
+                        p = "undefined" != typeof l[m].node.edge_media_to_caption.edges[0] && "undefined" != typeof l[m].node.edge_media_to_caption.edges[0].node && "undefined" != typeof l[m].node.edge_media_to_caption.edges[0].node.text && null !== l[m].node.edge_media_to_caption.edges[0].node.text ? l[m].node.edge_media_to_caption.edges[0].node.text : "undefined" != typeof l[m].node.accessibility_caption && null !== l[m].node.accessibility_caption ? l[m].node.accessibility_caption : (g ? c.name : c.username) + " image " + m, j += "<a href='" + q + "' class='instagram-" + o + "' rel='noopener' target='_blank'>", j += "<img class="lazyload"" + (f.lazy_load ? " loading='lazy'" : "") + " src='" + n + "' alt='" + b(p) + "'" + e.gallery_image + " />", j += "</a>"
                     }
                     j += "</div>"
                 }
@@ -7454,7 +7454,7 @@
                     var r = c.edge_felix_video_timeline.edges, s = r.length > f.items ? f.items : r.length;
                     if (0 < r.length) {
                         j += "<div class='instagram_igtv'>";
-                        for (var m = 0; m < s; m++) j += "<a href='https://www.instagram.com/p/" + r[m].node.shortcode + "' rel='noopener' target='_blank'>", j += "<img" + (f.lazy_load ? " loading='lazy'" : "") + " src='" + r[m].node.thumbnail_src + "' alt='" + f.username + " instagram image " + m + "'" + e.gallery_image + " />", j += "</a>";
+                        for (var m = 0; m < s; m++) j += "<a href='https://www.instagram.com/p/" + r[m].node.shortcode + "' rel='noopener' target='_blank'>", j += "<img class="lazyload"" + (f.lazy_load ? " loading='lazy'" : "") + " src='" + r[m].node.thumbnail_src + "' alt='" + f.username + " instagram image " + m + "'" + e.gallery_image + " />", j += "</a>";
                         j += "</div>"
                     }
                 }
