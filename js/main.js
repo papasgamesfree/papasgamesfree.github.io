@@ -1441,5 +1441,9 @@
 
     });
 
-
+    $("#comments-btn").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#discuss").offset().top
+        }, 1000);
+    });
 })(jQuery);

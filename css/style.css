@@ -334,17 +334,19 @@ a {
     transition: all 0.3s ease 0s;
 }
 
-a,
+a {
+    text-decoration: none;
+    outline: none;
+    color: #e53e29;
+}
+
 a:hover,
 a:focus,
 a:active {
     text-decoration: none;
     outline: none;
-    color: inherit;
-}
-
-a:hover {
-    color: var(--ltn__secondary-color);
+    color: #e53e29;
+    font-weight: 600;
 }
 
 button,
@@ -5043,6 +5045,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .ltn__main-menu li > a {
     position: relative;
+    color: var(--ltn__paragraph-color);
 }
 
 .ltn__main-menu > ul > li {
@@ -8253,6 +8256,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     margin-bottom: 5px;
 }
 
+.product-title > a {
+    color: var(--ltn__paragraph-color);
+}
+
 .product-ratting {
     margin-bottom: 5px;
 }
@@ -9750,7 +9757,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .section-title {
     margin-bottom: 5px;
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -9835,7 +9842,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     border-width: 0 0 0 2px;
     border-style: solid;
     border-color: var(--ltn__secondary-color);
-/*     max-width: 450px; */
+    /*     max-width: 450px; */
 }
 
 .ltn__section-title-2.text-right p {
@@ -16517,6 +16524,178 @@ input.cart-plus-minus-box {
     border: 2px solid var(--border-color-10);
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.game-wrapper {
+    min-width: 320px;
+    max-width: 810px;
+    height: 585px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #495057;
+}
+
+#game-arena {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.game-container,
+#game-arena > iframe {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.talpa-splash-container {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.talpa-splash-top {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.talpa-splash-top > div {
+    text-align: center;
+}
+
+.talpa-splash-top > div > div:first-child {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto auto 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid hsla(0, 0%, 100%, 0.8);
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-image: var(--thumb);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.talpa-splash-bottom {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.talpa-loader, .talpa-loader:after {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.talpa-loader {
+    box-sizing: content-box;
+    margin: 0 auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border: 1.1em solid hsla(0, 0%, 100%, 0.2);
+    border-left-color: #fff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: talpa-load8 1.1s linear infinite;
+    animation: talpa-load8 1.1s linear infinite;
+    display: none;
+}
+
+#game-controls {
+    display: flex;
+    justify-content: right;
+    height: 45px;
+    background-color: #343a40;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.func-btn {
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.func-btn:hover,
+.func-btn:focus,
+.func-btn:active {
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+.func-btn:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.func-btn:hover > svg {
+    transform: scale(1.1);
+}
+
+.fullscreen > div > div > iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.talpa-btn-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talpa-btn-play > span {
+    padding: 8px 16px;
+    cursor: pointer;
+    background: #155724;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.talpa-btn-play > span > svg {
+    user-select: none;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    margin-top: -4px;
+}
+
+.talpa-btn-play > span:hover {
+    transform: scale(1.1);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
